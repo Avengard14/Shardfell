@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shardfell - Hall des Aventuriers</title>
+    <!-- Bootstrap 5 CSS (uniquement pour le responsive) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marko+One&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="image/Logo-(1).png" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="image/Logo-(1).png"
+            alt="Logo Shardfell"
+            class="logo-icon me-2"
+          />
+          <span class="logo-text">Shardfell</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link asymmetric-btn hall active"
+                aria-current="page"
+                href="index.html"
+                >Hall</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="Le_Jeu.html"
+                >Le Jeu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="A_propos.html"
+                >À propos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="Contact.html"
+                >Nous contacter</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="produit.html"
+                >Boutique</a
+              >
+            </li>
+            <!-- Icône du panier dans la barre de navigation -->
+            <li class="nav-item">
+              <button
+                class="nav-link asymmetric-btn cart-btn"
+                onclick="showCart()"
+              >
+                <i class="fas fa-shopping-cart me-1"></i>
+                Panier
+                <span class="cart-count empty" id="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container mt-4">
+      <!-- Page Produits -->
+      <div id="products-page">
+        <h1 class="page-title display-4">Boutique Shardfell</h1>
+        <p class="text-center mb-5">
+          Découvrez notre collection exclusive d'objets de collection
+        </p>
+
+        <!-- Grille de produits -->
+        <div class="row g-4 mb-5">
+          <!-- Produit 1 - Peluche Dragon -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="product-badge">Nouveau</div>
+                <div class="product-image">
+                  <img
+                    src="image/dragon.png"
+                    alt="Peluche Dragon de Shardfell"
+                    class="product-image-img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Peluche Dragon de Shardfell</h3>
+                <p class="product-description">
+                  Peluche premium du légendaire Dragon des Cristaux. Matières
+                  douces et détails brodés à la main.
+                </p>
+                <div class="product-features">
+                  <span class="feature">🎨 Édition limitée</span>
+                  <span class="feature">✨ Détails brodés</span>
+                  <span class="feature">📏 30cm</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">29,99 €</span>
+                  <span class="price-original">39,99 €</span>
+                </div>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCart(1, 'Peluche Dragon de Shardfell', 29.99, '🐉')"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Ajouter au panier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produit 2 - Lance Cosplay -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="product-badge popular">Populaire</div>
+                <img
+                  src="image/lance.png"
+                  alt="Peluche Dragon de Shardfell"
+                  class="product-image-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Lance de Lumière Éternelle</h3>
+                <p class="product-description">
+                  Réplique fidèle de la lance légendaire pour vos cosplays.
+                  Matériaux résistants et effets lumineux LED.
+                </p>
+                <div class="product-features">
+                  <span class="feature">⚡ LED intégrées</span>
+                  <span class="feature">🛡️ Matériaux sûrs</span>
+                  <span class="feature">📏 200cm</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">109,99 €</span>
+                </div>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCart(2, 'Lance de Lumière Éternelle', 109.99, '🗡️')"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Ajouter au panier
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produit 3 - Figurine Anime -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="product-badge premium">Premium</div>
+                <img
+                  src="image/figurine.png"
+                  alt="Peluche Dragon de Shardfell"
+                  class="product-image-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Figurine Héros Shardfell</h3>
+                <p class="product-description">
+                  Figurine collector style anime du héros principal. Finitions
+                  haut de gamme et base lumineuse incluse.
+                </p>
+                <div class="product-features">
+                  <span class="feature">🎨 Peinte à la main</span>
+                  <span class="feature">💎 Base lumineuse</span>
+                  <span class="feature">📏 25cm</span>
+                </div>
+                <div class="product-price">
+                  <span class="price-current">149,99 €</span>
+                  <span class="price-original">179,99 €</span>
+                </div>
+                <button
+                  class="add-to-cart-btn"
+                  onclick="addToCart(3, 'Figurine Héros Shardfell', 149.99, '🏆')"
+                >
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Ajouter au panier
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Steam -->
+        <div class="steam-section">
+          <div class="steam-logo">
+            <span class="steam-icon">🎮</span>
+            <span class="steam-text">Disponible sur Steam</span>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <h3 class="steam-title">Shardfell: Chronicles</h3>
+              <p class="mb-4">
+                Plongez dans l'aventure complète ! Explorez les terres
+                fracturées, affrontez des créatures légendaires et forgez votre
+                propre destinée.
+              </p>
+              <div class="steam-features">
+                <div class="steam-feature">
+                  <span class="feature-icon">🌍</span>
+                  <span>Monde ouvert immense</span>
+                </div>
+                <div class="steam-feature">
+                  <span class="feature-icon">⚔️</span>
+                  <span>Combat tactique</span>
+                </div>
+              </div>
+              <div class="steam-price">
+                <span class="game-price-current">24,99 €</span>
+                <span class="game-price-original">39,99 €</span>
+                <span class="discount-badge">-38%</span>
+              </div>
+              <div class="steam-actions mt-4">
+                <a
+                  href="https://store.steampowered.com/app/fictive-shardfell"
+                  class="steam-btn"
+                  target="_blank"
+                >
+                  <i class="fab fa-steam me-2"></i>
+                  Voir sur Steam
+                </a>
+                <button class="wishlist-btn">
+                  <i class="fas fa-heart me-2"></i>
+                  Liste de souhaits
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="game-preview">
+                <span class="preview-icon">🎮</span>
+                <p class="mt-2 mb-0">Aperçu du Jeu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Panier -->
+      <div id="cart-page" style="display: none">
+        <h1 class="page-title display-4">Votre Panier</h1>
+
+        <!-- Panier vide -->
+        <div class="empty-cart" id="empty-cart">
+          <div class="empty-cart-icon">🛒</div>
+          <h3 class="empty-cart-title">Votre panier est vide</h3>
+          <p class="product-description">
+            Découvrez nos produits exclusifs dans la boutique !
+          </p>
+          <button class="btn btn-outline-warning mt-3" onclick="showProducts()">
+            <i class="fas fa-shopping-bag me-2"></i>
+            Continuer les achats
+          </button>
+        </div>
+
+        <!-- Panier avec articles -->
+        <div id="cart-with-items" style="display: none">
+          <div class="row">
+            <div class="col-lg-8">
+              <h3 class="mb-4">Articles dans votre panier</h3>
+              <div id="cart-items">
+                <!-- Les articles seront ajoutés dynamiquement ici -->
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="order-summary">
+                <h3 class="summary-title">Résumé de la commande</h3>
+
+                <div class="summary-line">
+                  <span class="summary-label">Sous-total :</span>
+                  <span class="summary-value" id="subtotal">0,00 €</span>
+                </div>
+                <div class="summary-line">
+                  <span class="summary-label">TVA (20%) :</span>
+                  <span class="summary-value" id="tax">0,00 €</span>
+                </div>
+                <div class="summary-line">
+                  <span class="summary-label">Frais de port :</span>
+                  <span class="summary-value text-success">Gratuit</span>
+                </div>
+                <hr class="my-3" style="border-color: var(--gold)" />
+                <div class="summary-line total-line">
+                  <span class="summary-label">Total :</span>
+                  <span class="summary-value" id="total">0,00 €</span>
+                </div>
+
+                <!-- Formulaire de commande -->
+                <form
+                  class="checkout-form mt-4"
+                  id="checkout-form"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST"
+                >
+                  <h4 class="form-section-title">Informations de livraison</h4>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="firstName">Prénom *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="firstName"
+                          name="firstName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="lastName">Nom *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lastName"
+                          name="lastName"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address">Adresse *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      name="address"
+                      required
+                    />
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label for="city">Ville *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="city">Code postal *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="zipCode"
+                          name="zipCode"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="country">Pays *</label>
+                    <select
+                      class="form-control"
+                      id="country"
+                      name="country"
+                      required
+                    >
+                      <option value="">Sélectionner un pays</option>
+                      <option value="FR">France</option>
+                      <option value="BE">Belgique</option>
+                      <option value="CH">Suisse</option>
+                      <option value="CA">Canada</option>
+                      <option value="OTHER">Autre</option>
+                    </select>
+                  </div>
+
+                  <!-- Champs cachés pour les données de commande -->
+                  <input type="hidden" name="orderItems" id="orderItems" />
+                  <input type="hidden" name="orderTotal" id="orderTotal" />
+                  <input
+                    type="hidden"
+                    name="orderSubtotal"
+                    id="orderSubtotal"
+                  />
+                  <input type="hidden" name="orderTax" id="orderTax" />
+
+                  <button type="submit" class="checkout-btn">
+                    <i class="fas fa-credit-card me-2"></i>
+                    Finaliser la commande
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div class="confirmation-modal" id="confirmationModal">
+      <div class="modal-content">
+        <div class="modal-icon">✅</div>
+        <h3 class="modal-title">Commande confirmée !</h3>
+        <div class="modal-message">
+          <p><strong>Merci pour votre achat !</strong></p>
+          <p>Votre commande a été enregistrée avec succès.</p>
+          <p>Vous recevrez votre colis dans les <strong>48h</strong>.</p>
+          <p>Un email de confirmation vous sera envoyé sous peu.</p>
+        </div>
+        <button class="modal-btn" onclick="closeModal()">Parfait !</button>
+      </div>
+    </div>
+    <!-- Footer avec Bootstrap -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="footer-banner text-center mb-4">
+          <div class="banner-text">
+            ⚔️ L'aventure vous attend dans les terres de Shardfell ⚔️
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <div
+              class="footer-logo d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <img
+                src="image/Logo-(1).png"
+                alt="Logo Shardfell"
+                class="footer-logo-icon me-2"
+              />
+              <span class="footer-logo-text">Shardfell</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="social-icons d-flex justify-content-center gap-3">
+              <a
+                href="https://www.facebook.com"
+                title="Facebook"
+                aria-label="Page Facebook"
+                class="text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://x.com/home"
+                title="Twitter"
+                aria-label="Compte Twitter"
+                class="text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://discord.gg"
+                title="Discord"
+                aria-label="Serveur Discord"
+                class="text-white"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                title="YouTube"
+                aria-label="Chaîne YouTube"
+                class="text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <div
+              class="footer-links d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="condition.html" class="text-white"
+                >Conditions d'utilisation</a
+              >
+              <a href="politique.html" class="text-white"
+                >Politique de confidentialité</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <div class="copyright">© 2025 Shardfell - Tous droits réservés</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (avec Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ton script personnalisé -->
+    <script>
+      // Panier global
+      let cart = [];
+
+      // Affichage/masquage des pages
+      function showProducts() {
+        document.getElementById("products-page").style.display = "block";
+        document.getElementById("cart-page").style.display = "none";
+
+        // Mise à jour des liens actifs
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+        document
+          .querySelector('a[href="produits.html"]')
+          .classList.add("active");
+      }
+
+      function showCart() {
+        document.getElementById("products-page").style.display = "none";
+        document.getElementById("cart-page").style.display = "block";
+        updateCartDisplay();
+      }
+
+      // Ajouter un produit au panier
+      function addToCart(id, name, price, emoji) {
+        const existingItem = cart.find((item) => item.id === id);
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            id: id,
+            name: name,
+            price: price,
+            emoji: emoji,
+            quantity: 1,
+          });
+        }
+
+        updateCartCount();
+        showNotification(`${name} ajouté au panier !`, "success");
+      }
+
+      // Mettre à jour le compteur du panier
+      function updateCartCount() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const cartCountEl = document.getElementById("cart-count");
+
+        if (totalItems > 0) {
+          cartCountEl.textContent = totalItems;
+          cartCountEl.classList.remove("empty");
+        } else {
+          cartCountEl.classList.add("empty");
+        }
+      }
+
+      // Mettre à jour l'affichage du panier
+      function updateCartDisplay() {
+        const emptyCart = document.getElementById("empty-cart");
+        const cartWithItems = document.getElementById("cart-with-items");
+        const cartItemsContainer = document.getElementById("cart-items");
+
+        if (cart.length === 0) {
+          emptyCart.style.display = "block";
+          cartWithItems.style.display = "none";
+          return;
+        }
+
+        emptyCart.style.display = "none";
+        cartWithItems.style.display = "block";
+
+        // Vider le container
+        cartItemsContainer.innerHTML = "";
+
+        // Ajouter chaque article
+        cart.forEach((item) => {
+          const cartItem = document.createElement("div");
+          cartItem.className = "cart-item";
+          cartItem.innerHTML = `
+                    <div class="cart-item-image">
+                        <span>${item.emoji}</span>
+                    </div>
+                    <div class="cart-item-info flex-grow-1">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">${item.price.toFixed(
+                          2
+                        )} €</div>
+                        <div class="quantity-controls mt-2">
+                            <button class="quantity-btn" onclick="updateQuantity(${
+                              item.id
+                            }, -1)">-</button>
+                            <input type="number" class="quantity-input" value="${
+                              item.quantity
+                            }" 
+                                   onchange="setQuantity(${
+                                     item.id
+                                   }, this.value)" min="1">
+                            <button class="quantity-btn" onclick="updateQuantity(${
+                              item.id
+                            }, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-bold">${(
+                          item.price * item.quantity
+                        ).toFixed(2)} €</div>
+                        <button class="remove-btn mt-2" onclick="removeFromCart(${
+                          item.id
+                        })">
+                            <i class="fas fa-trash me-1"></i>Supprimer
+                        </button>
+                    </div>
+                `;
+          cartItemsContainer.appendChild(cartItem);
+        });
+
+        updateOrderSummary();
+      }
+
+      // Mettre à jour la quantité
+      function updateQuantity(id, change) {
+        const item = cart.find((item) => item.id === id);
+        if (item) {
+          item.quantity = Math.max(1, item.quantity + change);
+          updateCartCount();
+          updateCartDisplay();
+        }
+      }
+
+      // Définir la quantité
+      function setQuantity(id, newQuantity) {
+        const quantity = Math.max(1, parseInt(newQuantity) || 1);
+        const item = cart.find((item) => item.id === id);
+        if (item) {
+          item.quantity = quantity;
+          updateCartCount();
+          updateCartDisplay();
+        }
+      }
+
+      // Supprimer du panier
+      function removeFromCart(id) {
+        cart = cart.filter((item) => item.id !== id);
+        updateCartCount();
+        updateCartDisplay();
+        showNotification("Article supprimé du panier", "info");
+      }
+
+      // Mettre à jour le résumé de commande
+      function updateOrderSummary() {
+        const subtotal = cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        );
+        const tax = subtotal * 0.2; // TVA 20%
+        const total = subtotal + tax;
+
+        document.getElementById("subtotal").textContent =
+          subtotal.toFixed(2) + " €";
+        document.getElementById("tax").textContent = tax.toFixed(2) + " €";
+        document.getElementById("total").textContent = total.toFixed(2) + " €";
+
+        // Mettre à jour les champs cachés pour Formspree
+        document.getElementById("orderItems").value = JSON.stringify(cart);
+        document.getElementById("orderSubtotal").value = subtotal.toFixed(2);
+        document.getElementById("orderTax").value = tax.toFixed(2);
+        document.getElementById("orderTotal").value = total.toFixed(2);
+      }
+
+      // Gestion du formulaire
+      document
+        .getElementById("checkout-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (cart.length === 0) {
+            showNotification("Votre panier est vide !", "error");
+            return;
+          }
+
+          // Simuler l'envoi vers Formspree
+          setTimeout(() => {
+            showConfirmationModal();
+            // Vider le panier après confirmation
+            cart = [];
+            updateCartCount();
+            updateCartDisplay();
+          }, 1000);
+        });
+
+      // Modal de confirmation
+      function showConfirmationModal() {
+        document.getElementById("confirmationModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("confirmationModal").style.display = "none";
+        showProducts(); // Retourner à la boutique
+      }
+
+      // Système de notifications
+      function showNotification(message, type = "info") {
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${
+                  type === "success"
+                    ? "#28a745"
+                    : type === "error"
+                    ? "#dc3545"
+                    : "#17a2b8"
+                };
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 10000;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                max-width: 300px;
+                font-family: 'Inter', sans-serif;
+            `;
+        notification.textContent = message;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.transform = "translateX(0)";
+        }, 100);
+
+        setTimeout(() => {
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            if (document.body.contains(notification)) {
+              document.body.removeChild(notification);
+            }
+          }, 300);
+        }, 3000);
+      }
+
+      // Initialisation
+      document.addEventListener("DOMContentLoaded", function () {
+        updateCartCount();
+        console.log("🛒 Boutique Shardfell initialisée !");
+      });
+    </script>
+  </body>
+</html>

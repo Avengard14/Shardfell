@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shardfell - Hall des Aventuriers</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marko+One&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css" />
+     <link rel="shortcut icon" href="image/Logo-(1).png" />
+  </head>
+  <body>
+    <!-- Bannière -->
+    <div class="banner">
+      <div class="banner-text">
+        🏹 Bienvenue dans l'univers légendaire de Shardfell 🏹
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="image/Logo-(1).png"
+            alt="Logo Shardfell"
+            class="logo-icon me-2"
+          />
+          <span class="logo-text">Shardfell</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link asymmetric-btn hall active"
+                aria-current="page"
+                href="index.html"
+                >Hall</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="Le_Jeu.html"
+                >Le Jeu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="A_propos.html"
+                >À propos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="Contact.html"
+                >Nous contacter</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="produit.html"
+                >Boutique</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+      <div class="container">
+        <!-- Hero Section -->
+        <div class="game-hero">
+          <h1 class="game-title">Le Monde de Shardfell</h1>
+          <p class="game-subtitle">
+            Plongez dans un univers fantastique où magie, créatures légendaires
+            et héros se côtoient dans des aventures épiques
+          </p>
+        </div>
+        <!-- Cartes du jeu -->
+        <div class="game-cards">
+          <!-- Personnages -->
+          <div class="game-card" data-category="characters">
+            <div class="card-image"><div class="card-icon">🧙‍♂️</div></div>
+            <div class="card-content">
+              <h3 class="card-title">Personnages</h3>
+              <p class="card-description">
+                Découvrez les héros légendaires de Shardfell, chacun avec ses
+                propres compétences, histoires et destinées uniques.
+              </p>
+              <button class="card-button">
+                <i class="fas fa-info-circle"></i> S'informer
+              </button>
+            </div>
+          </div>
+          <!-- Équipements -->
+          <div class="game-card" data-category="equipment">
+            <div class="card-image"><div class="card-icon">⚔️</div></div>
+            <div class="card-content">
+              <h3 class="card-title">Équipements</h3>
+              <p class="card-description">
+                Explorez l'arsenal magique et les équipements légendaires qui
+                vous aideront dans vos quêtes les plus périlleuses.
+              </p>
+              <button class="card-button">
+                <i class="fas fa-info-circle"></i> S'informer
+              </button>
+            </div>
+          </div>
+          <!-- Bestiaire -->
+          <div class="game-card" data-category="bestiary">
+            <div class="card-image"><div class="card-icon">🐉</div></div>
+            <div class="card-content">
+              <h3 class="card-title">Bestiaire</h3>
+              <p class="card-description">
+                Affrontez des créatures fantastiques, des dragons anciens aux
+                esprits des forêts, chacune avec ses propres secrets.
+              </p>
+              <button class="card-button">
+                <i class="fas fa-info-circle"></i> S'informer
+              </button>
+            </div>
+          </div>
+          <!-- Univers du jeu -->
+          <div class="game-card" data-category="world">
+            <div class="card-image">
+              <div class="card-icon">🏰</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Univers du Jeu</h3>
+              <p class="card-description">
+                Parcourez les terres mystiques de Shardfell, des forêts
+                enchantées aux donjons les plus sombres.
+              </p>
+              <button class="card-button">
+                <i class="fas fa-info-circle"></i> S'informer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal avec carrousel (style médiéval) -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-content">
+        <!-- Coins décoratifs -->
+        <div class="modal-corner modal-corner-top-left">✦</div>
+        <div class="modal-corner modal-corner-top-right">✦</div>
+        <div class="modal-corner modal-corner-bottom-left">✦</div>
+        <div class="modal-corner modal-corner-bottom-right">✦</div>
+
+        <!-- Surface intérieure (parchemin) -->
+        <div class="modal-surface">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modal-title">Titre de la catégorie</h2>
+            <button class="close-button" id="close-modal" aria-label="Fermer">
+              ×
+            </button>
+          </div>
+
+          <div class="carousel-container" id="carousel-container">
+            <!-- Les slides seront ajoutées dynamiquement par JavaScript -->
+          </div>
+
+          <div class="carousel-controls">
+            <button
+              class="carousel-button"
+              id="prev-slide"
+              aria-label="Précédent"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="carousel-button"
+              id="next-slide"
+              aria-label="Suivant"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="carousel-dots" id="carousel-dots">
+            <!-- Les dots seront ajoutés dynamiquement par JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container-fluid">
+        <div class="footer-banner text-center mb-4">
+          <div class="banner-text">
+            ⚔️ L'aventure vous attend dans les terres de Shardfell ⚔️
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <div
+              class="footer-logo d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <img
+                src="image/Logo-(1).png"
+                alt="Logo Shardfell"
+                class="footer-logo-icon me-2"
+              />
+              <span class="footer-logo-text">Shardfell</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="social-icons d-flex justify-content-center gap-3">
+              <a
+                href="https://www.facebook.com"
+                title="Facebook"
+                aria-label="Page Facebook"
+                class="text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://x.com/home"
+                title="Twitter"
+                aria-label="Compte Twitter"
+                class="text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://discord.gg"
+                title="Discord"
+                aria-label="Serveur Discord"
+                class="text-white"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                title="YouTube"
+                aria-label="Chaîne YouTube"
+                class="text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <div
+              class="footer-links d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="condition.html" class="text-white">Conditions d'utilisation</a>
+              <a href="politique.html" class="text-white">Politique de confidentialité</a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <div class="copyright">© 2025 Shardfell - Tous droits réservés</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

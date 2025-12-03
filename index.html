@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shardfell - Hall des Aventuriers</title>
+    <!-- Bootstrap 5 CSS (uniquement pour le responsive) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marko+One&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css" />
+     <link rel="shortcut icon" href="image/Logo-(1).png" />
+  </head>
+  <body>
+    <!-- Bannière -->
+    <div class="banner">
+      <div class="banner-text">
+        🏹 Bienvenue dans l'univers légendaire de Shardfell 🏹
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="image/Logo-(1).png"
+            alt="Logo Shardfell"
+            class="logo-icon me-2"
+          />
+          <span class="logo-text">Shardfell</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link asymmetric-btn hall active"
+                aria-current="page"
+                href="index.html"
+                >Hall</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="Le_Jeu.html"
+                >Le Jeu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn menu-item" href="A_propos.html"
+                >À propos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="Contact.html"
+                >Nous contacter</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link asymmetric-btn cart-btn" href="produit.html"
+                >Boutique</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Contenu principal -->
+    <main>
+      <div class="container py-4">
+        <div class="hall-content text-center mb-5">
+          <h1 class="hall-title">Hall de la Guilde</h1>
+          <p class="hall-subtitle">
+            Consultez le tableau des quêtes disponibles
+          </p>
+        </div>
+
+        <!-- Tableau de Guilde -->
+        <div class="guild-board-container my-4">
+          <div class="guild-board mx-auto">
+            <div class="board-frame">
+              <!-- Coins décoratifs -->
+              <div class="corner corner-top-left">🛡️</div>
+              <div class="corner corner-top-right">🛡️</div>
+              <div class="corner corner-bottom-left">🛡️</div>
+              <div class="corner corner-bottom-right">🛡️</div>
+
+              <!-- Surface du tableau -->
+              <div class="board-surface">
+                <div class="board-texture"></div>
+                <div class="board-header text-center">
+                  <h2 class="board-title">📋 Tableau des Quêtes 📋</h2>
+                  <div class="board-subtitle">
+                    Choisissez votre destinée, brave aventurier
+                  </div>
+                </div>
+                <!-- Parchemins (grille responsive) -->
+                <div
+                  class="scrolls-board d-flex flex-wrap justify-content-center"
+                >
+                  <!-- Parchemin 1 -->
+                  <div class="scroll-container mx-2 my-2">
+                    <div class="scroll-pin">📌</div>
+                    <div class="scroll">
+                      <div class="scroll-header">
+                        <div class="scroll-seal">🏛️</div>
+                        <h3 class="scroll-title">Nous Contacter</h3>
+                      </div>
+                      <div class="scroll-content">
+                        <p class="scroll-text">
+                          La Guilde des Braves recrute de nouveaux aventuriers!
+                        </p>
+                        <p class="scroll-details">
+                          Rejoignez nos rangs et partez à la conquête des terres
+                          mystérieuses de Shardfell.
+                        </p>
+                        <div class="scroll-reward">
+                          <span class="reward-label">Récompense:</span>
+                          <span class="reward-value"
+                            >Kit de démarrage + 100 pièces d'or</span
+                          >
+                        </div>
+                      </div>
+                      <div class="scroll-footer">
+                        <div class="scroll-signature">~ Maître de Guilde ~</div>
+                        <a href="Contact.html" class="scroll-button"
+                          >Contacter nos supérieur</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Parchemin 2 -->
+                  <div class="scroll-container mx-2 my-2">
+                    <div class="scroll-pin">📌</div>
+                    <div class="scroll">
+                      <div class="scroll-header">
+                        <div class="scroll-seal">⚔️</div>
+                        <h3 class="scroll-title">Manuel d'Aventure</h3>
+                      </div>
+                      <div class="scroll-content">
+                        <p class="scroll-text">
+                          Guide complet de l'univers de Shardfell
+                        </p>
+                        <p class="scroll-details">
+                          Découvrez les créatures, artefacts et royaumes qui
+                          vous attendent dans vos quêtes.
+                        </p>
+                        <div class="scroll-reward">
+                          <span class="reward-label">Contenu:</span>
+                          <span class="reward-value"
+                            >Bestiaire • Équipements • Cartes</span
+                          >
+                        </div>
+                      </div>
+                      <div class="scroll-footer">
+                        <div class="scroll-signature">~ Archiviste Royal ~</div>
+                        <a href="Le_Jeu.html" class="scroll-button">EXPLORER</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Parchemin 3 -->
+                  <div class="scroll-container mx-2 my-2">
+                    <div class="scroll-pin">📌</div>
+                    <div class="scroll">
+                      <div class="scroll-header">
+                        <div class="scroll-seal">📜</div>
+                        <h3 class="scroll-title">Connaître la Guilde</h3>
+                      </div>
+                      <div class="scroll-content">
+                        <p class="scroll-text">
+                          Besoin d'info ou d'être rassurer quand a votre entrer
+                          dans Shardfell ? Nous somme là
+                        </p>
+                        <p class="scroll-details">
+                          Nos maîtres de jeu expérimentés sont là pour vous
+                          accompagner dans votre aventure.
+                        </p>
+                        <div class="scroll-reward">
+                          <span class="reward-label">Avant-goût:</span>
+                          <span class="reward-value"
+                            >Support 24h/7j • Conseil gratuit</span
+                          >
+                        </div>
+                      </div>
+                      <div class="scroll-footer">
+                        <div class="scroll-signature">~ Maitre de Guilde ~</div>
+                        <a href="A_propos.html" class="scroll-button"
+                          >Nous connaître</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informations supplémentaires (centrées) -->
+        <div
+          class="hall-info d-flex flex-md-row justify-content-center align-items-center gap-4 my-5"
+        >
+          <div class="info-card text-center">
+            <h3>📊 Statistiques de la Guilde</h3>
+            <div
+              class="stats-grid d-flex justify-content-center gap-4 flex-wrap"
+            >
+              <div class="stat text-center">
+                <span class="stat-number d-block">1,247</span>
+                <span class="stat-label">Aventuriers actifs</span>
+              </div>
+              <div class="stat text-center">
+                <span class="stat-number d-block">89</span>
+                <span class="stat-label">Quêtes en cours</span>
+              </div>
+              <div class="stat text-center">
+                <span class="stat-number d-block">15</span>
+                <span class="stat-label">Royaumes explorés</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-card text-center">
+            <h3>📰 Dernières Nouvelles</h3>
+            <div class="news-list d-flex flex-column align-items-center gap-2">
+              <div
+                class="news-item d-flex justify-content-between w-100 max-width-400"
+              >
+                <span class="news-date">3 Sept</span>
+                <span class="news-text"
+                  >Dragon aperçu dans les Monts du Crépuscule</span
+                >
+              </div>
+              <div
+                class="news-item d-flex justify-content-between w-100 max-width-400"
+              >
+                <span class="news-date">1 Sept</span>
+                <span class="news-text"
+                  >Nouvelle zone: Les Jardins Éternels</span
+                >
+              </div>
+              <div
+                class="news-item d-flex justify-content-between w-100 max-width-400"
+              >
+                <span class="news-date">30 Août</span>
+                <span class="news-text"
+                  >Tournoi mensuel - Inscriptions ouvertes</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer avec Bootstrap -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="footer-banner text-center mb-4">
+          <div class="banner-text">
+            ⚔️ L'aventure vous attend dans les terres de Shardfell ⚔️
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <div
+              class="footer-logo d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <img
+                src="image/Logo-(1).png"
+                alt="Logo Shardfell"
+                class="footer-logo-icon me-2"
+              />
+              <span class="footer-logo-text">Shardfell</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="social-icons d-flex justify-content-center gap-3">
+              <a
+                href="https://www.facebook.com"
+                title="Facebook"
+                aria-label="Page Facebook"
+                class="text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://x.com/home"
+                title="Twitter"
+                aria-label="Compte Twitter"
+                class="text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://discord.gg"
+                title="Discord"
+                aria-label="Serveur Discord"
+                class="text-white"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                title="YouTube"
+                aria-label="Chaîne YouTube"
+                class="text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <div
+              class="footer-links d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="condition.html" class="text-white"
+                >Conditions d'utilisation</a
+              >
+              <a href="politique.html" class="text-white"
+                >Politique de confidentialité</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <div class="copyright">© 2025 Shardfell - Tous droits réservés</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (avec Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ton script personnalisé -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
